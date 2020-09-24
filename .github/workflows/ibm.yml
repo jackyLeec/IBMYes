@@ -38,8 +38,9 @@ jobs:
     - name: Restart IBM Cloud
       env:
         IBM_APP_NAME: ${{ secrets.IBM_APP_NAME }}
-        ibmcloud api: cloud.ibm.com
       run: |
+        ./IBM_Cloud_CLI/ibmcloud api cloud.ibm.com
         ./IBM_Cloud_CLI/ibmcloud cf restart "$IBM_APP_NAME"
+        
         
         
